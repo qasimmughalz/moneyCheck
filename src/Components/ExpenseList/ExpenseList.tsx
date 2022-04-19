@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import { GlobalContext } from '../../App'
 import ExpenseCard from '../ExpenseCard/ExpenseCard'
-import css from './ExpenseList.css'
+import './ExpenseList.css'
 
 const ExpenseList = ()=>{
 

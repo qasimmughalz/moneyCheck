@@ -1,15 +1,13 @@
 import './App.css';
 import React, { createContext , useReducer} from 'react'
 import ExpenseList from './Components/ExpenseList/ExpenseList';
-import Balance from './Components/Balance/Balance';
-import DebitCredit from './Components/DebitCredit/DebitCredit';
 import AddTransaction from './Components/AddTransaction/AddTransaction';
 
  
  const initialStates = {
   transactions : [
-    {id:1,title:'Payment', amount:-100},
-    {id:2,title:'Expense', amount:-50},
+    {id:1,title:'Payment', amount:100},
+    {id:2,title:'Expense', amount:50},
     {id:3,title:'Schooling', amount:400},
     {id:4,title:'Shopping', amount:170},
     {id:5,title:'Learning', amount:980},
@@ -37,12 +35,11 @@ export const GlobalContext = createContext(initialStates)
 }
 
 
+
+
 function App() {
-
   const [state, dispatch] = useReducer(reducer, initialStates)
-
   console.log('im ap' , state)
-
 
   function addTransaction(tansaction){
     dispatch({
@@ -56,7 +53,7 @@ function App() {
     type:'delete',
     payload:id
     })
-  }
+  } 
 
 
   return (

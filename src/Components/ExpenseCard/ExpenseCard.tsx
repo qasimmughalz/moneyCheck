@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../../App'
-import css from './ExpenseCard.css'
+import './ExpenseCard.css'
 
 export default function ExpenseCard({ id, title, amount}){
 
